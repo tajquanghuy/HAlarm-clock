@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0B9BD"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/alarm" />
+
+<!--    <Button-->
+<!--        android:id="@+id/btnNew"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:backgroundTint="#F43576"-->
+<!--        android:text="New Alarm" />-->
+
+    <Button
+        android:id="@+id/btnList"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#129C49"
+        android:text="My Alarms" />
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#CDBA0E"
+        android:text="Subscription" />
+</LinearLayout>
