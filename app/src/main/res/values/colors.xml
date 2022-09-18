@@ -13,5 +13,10 @@
     <color name="pink">#E91E63</color>
     <color name="blue">#12B7D8</color>
 
+    <color name="colorPrimary">#9be7ae</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="colorBlack">#646161</color>
+
     <color name="screen_bg_dark">#FF424242</color>
 </resources>

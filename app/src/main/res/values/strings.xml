@@ -5,4 +5,10 @@
     <string name="restore">Restore</string>
     <string name="restore_purchases">Restore Purchases</string>
     <string name="title_activity_buy_coins">BuyCoinsActivity</string>
+
+    <string name="alarm_name">Alarm Name</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="add">Add alarm</string>
+    <string name="Ringtone">Ringtone</string>
 </resources>

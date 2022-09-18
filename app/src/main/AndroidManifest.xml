@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.pigllet.halarmclock">
+    package="com.alarmringing.halarmclock">
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="your.package.alarm.permission.SET_ALARM" />
+
     <application
-        android:name=".alarmclock.application.App"
+        android:name="com.alarmringing.halarmclock.alarmclock.application.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -20,7 +23,7 @@
         android:theme="@style/Theme.HAlarmClock"
         tools:targetApi="31">
         <activity
-            android:name=".SplashActivity"
+            android:name="com.alarmringing.halarmclock.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,30 +32,44 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name="com.alarmringing.halarmclock.HomeActivity"
             android:exported="false" />
-        <activity android:name=".alarmclock.activities.RingActivity" />
-        <activity android:name=".alarmclock.activities.MainActivity" />
+        <activity android:name="com.alarmringing.halarmclock.alarmclock.activities.RingActivity" />
+        <activity android:name="com.alarmringing.halarmclock.alarmclock.activities.MainActivity" />
 
         <receiver
-            android:name=".alarmclock.broadcastreceiver.AlarmBroadcastReceiver"
+            android:name="com.alarmringing.halarmclock.alarmclock.broadcastreceiver.AlarmBroadcastReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
-        <service android:name=".alarmclock.service.AlarmService" />
-        <service android:name=".alarmclock.service.RescheduleAlarmsService" />
+        <service android:name="com.alarmringing.halarmclock.alarmclock.service.AlarmService" />
+        <service android:name="com.alarmringing.halarmclock.alarmclock.service.RescheduleAlarmsService" />
 
         <activity
-            android:name=".iap.activities.BuyCoinActivity"
+            android:name="com.alarmringing.halarmclock.iap.activities.BuyCoinActivity"
             android:exported="true" />
         <activity
-            android:name=".iap.activities.Subscriptions"
+            android:name="com.alarmringing.halarmclock.iap.activities.Subscriptions"
             android:exported="true" />
         <activity
-            android:name=".iap.activities.IAPActivity"
+            android:name="com.alarmringing.halarmclock.iap.activities.IAPActivity"
+            android:exported="true" />
+
+        <activity android:name=".ui.activity.AddAlarmActivity"/>
+        <activity android:name=".ui.activity.AlarmMainActivity"/>
+
+
+        <receiver
+            android:name=".ui.receiver.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".ui.service.AlarmService"
+            android:enabled="true"
             android:exported="true" />
     </application>
 
